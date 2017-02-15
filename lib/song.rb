@@ -58,7 +58,8 @@ class Song
     DB[:conn].execute(sql)
   end
 
+  def self.all
+    DB[:conn].execute("SELECT * FROM #{self.table_name}")
+  end
+
 end
-
-
-
